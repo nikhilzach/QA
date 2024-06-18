@@ -1,0 +1,17 @@
+//  const datahook = $el.attr('data-hook');
+//                 const lastChar = datahook.slice(-1);
+//                 const nextChar = String.fromCharCode(lastChar.charCodeAt(0) + 1);
+//                 const updatedDatahook = datahook.slice(0, -1) + nextChar;
+//                 cy.get(`[data-hook="${updatedDatahook}"]`, { timeout: 3000 })
+//                   .then(element => {
+//                     cy.get('button [data-hook*="select-economy-seat"]').eq(i).click();
+//                     cy.contains(`T ${temp}`).click();
+//                     cy.wrap(element).click();
+//                     temp--;
+//                   })
+//                   .catch(() => {
+//                     i++;i--;
+//                   });
+//             });
+
+//         cy.wait(10000000)
