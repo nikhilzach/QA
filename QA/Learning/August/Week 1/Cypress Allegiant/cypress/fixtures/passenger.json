@@ -1,0 +1,25 @@
+{
+  "name": "Nikhil Zachariah",
+  "gender":"MALE",
+  "email": "nikhil@gmail.io",
+  "phone": "718 222 2222",
+  "Dob": "28 3 2002",
+
+  "address":
+  { 
+    "address_line":"123 Street",
+    "address_line2":"apartment",
+    "city":"New york",
+    "state":"AK", 
+    "zip":51002
+  },
+ 
+  "card":{
+      "no": "5454 5454 5454 5454",
+      "cvv":998,
+      "expiryMonth":"December",
+      "expiryYear":"2024"
+  }
+  
+
+}
