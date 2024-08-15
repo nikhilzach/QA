@@ -1,0 +1,365 @@
+/* App.css */
+
+/* Import SF Pro font */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+/* Global Styles */
+.bg-background {
+  background-color: #ffffff; /* Background color  #f0f4f8*/
+}
+
+.btn.expand, .expand-on-hover:hover {
+  padding: 1em 2em 1em 3.5em;
+  max-width: 10em;
+  width: auto;
+  .text {
+    opacity: 1;
+    transition-delay: .3s;
+    min-width: inherit;
+    transform: translateX(0);
+  }
+}
+
+/* colors https://www.grabient.com/ */
+
+
+
+.red {
+  background-color: #ffffff;
+}
+
+/* icons */
+.plus {
+    height: 1.25em;
+    width: 1.25em;
+    border: 2px solid #fff;
+    display: inline-block;
+    border-radius: 2em;
+    
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    margin-top: -1px;
+    background: #fff;
+  }
+  &::before {
+   transform:rotate(0deg);
+  }
+  &::after {
+   transform:rotate(90deg);
+  }
+}
+
+.plus.close {
+  border: none;
+  transform:scale(1.75) rotate(45deg);
+  left: .8em;
+  top: .9em;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* App.css */
+.smaller-text {
+  font-size: 5rem; /* Adjust the size of 'Coming' */
+  display: inline-block;
+  margin-left: 0px; /* Adjust spacing specifically for 'Coming' */
+  margin-right: 15px;
+  margin-bottom:100px;
+  vertical-align:   0.2em; 
+}
+.word {
+  display: inline-block;
+  margin-left: 10px; /* Adjust the spacing on the left */
+  margin-right: 10px; /* Adjust the spacing on the right */
+  margin-bottom: 100px;
+}
+
+.circle-container {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons-container {
+  position: absolute;
+  width: 500px; /* Increase this value to make the circle larger */
+  height: 500px; /* Increase this value to make the circle larger */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Keep this to ensure the container remains circular */
+  z-index: 1; 
+}
+
+.text-primary, .text-second, .text-4xl {
+  z-index: 2; /* Set higher z-index for the text */
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #000; /* Ensure the text is visible on top */
+  
+}
+
+.floating-button {
+  z-index: 1; 
+  position: absolute;
+  width: 100px; /* Increased width */
+  height: 100px; /* Increased height */
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Increased font size */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.buttons-container {
+  animation: rotate 20s linear infinite;
+  
+}
+
+.floating-button:nth-child(1) { transform: rotate(0deg) translate(230px); }
+.floating-button:nth-child(2) { transform: rotate(45deg) translate(230px); }
+.floating-button:nth-child(3) { transform: rotate(90deg) translate(230px); }
+.floating-button:nth-child(4) { transform: rotate(135deg) translate(230px); }
+.floating-button:nth-child(5) { transform: rotate(180deg) translate(230px); }
+.floating-button:nth-child(6) { transform: rotate(225deg) translate(230px); }
+.floating-button:nth-child(7) { transform: rotate(270deg) translate(230px); }
+.floating-button:nth-child(8) { transform: rotate(315deg) translate(230px); }
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.text-primary {
+  color: #000000; /* Primary text color */
+  font-family: 'SF Pro Display', sans-serif; /* Use SF Pro font */
+}
+
+.text-second {
+  color: #ffffff; /* Primary text color */
+  font-family: 'SF Pro Display', sans-serif; /* Use SF Pro font */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 10rem;
+  font-family: 'SF Pro Display', sans-serif; /* Ensure title uses SF Pro font */
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-huge {
+  font-size: 10rem; /* Really large font size */
+  font-weight: 20;
+  font-family: 'SF Pro Display', sans-serif; /* Apply SF Pro font */
+  text-align: center;
+  color: white; /* Adjust the color as needed */
+}
+
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-lg {
+  
+  font-size: 1.125rem;
+}
+
+/* Apply SF Pro font to button */
+button {
+  font-family: 'SF Pro Display', sans-serif; /* Use SF Pro font */
+  
+  word-wrap: break-word;
+  
+}
+
+.bg-blue-500 {
+  background-color: #000000; /* Button color */
+}
+
+
+.bg-gray-400 {
+  background-color: #b0b0b0; /* Background color for the loading state */
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.padded-button
+{
+  position: absolute; /* Position relative to the nearest positioned ancestor */ 
+  top: 1600px; /* Moves the button down */ 
+  left: 850px; /* Moves the button to the right */ 
+  transition: all .5s ease;
+  color: #ffffff;
+
+  font-family: 'SF Pro Display', sans-serif;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color : transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+
+/* Center button and text */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Loader Styles */
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #000000; /* Match with button color */
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Styles for the new section */
+#more-section {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+#more-section h2 {
+  font-family: 'SF Pro Display', sans-serif; /* Use SF Pro font */
+}
