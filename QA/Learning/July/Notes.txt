@@ -1,0 +1,148 @@
+
+JMeter GUI 
+
+How to create first Jmeter Test
+
+1 Start JMeter
+2 Create a TestPlan
+3 Create a Thread Group (Users)
+4 Add a Sampler (Http)
+5 Add Listeners
+6 Run the Test
+
+JMeter Listeners (Reporting)
+Used for Reporting
+
+listener = elements that gather information about the performance test
+used to view results/metrics of the test
+
+Latency = time to first byte
+
+0ms—————————1000ms—————————2000ms
+0ms —————————————————————— 2000 ms
+
+1 View Results in Table
+2 View Results Tree
+3 Aggregate Report
+4 Graph Results
+5 Summary Report
+6 Simple Data Writer
+
+Assertions
+Assertions =  checks on the Request/Response
+
+1 Response Assertion
+2 Duration Assertion
+3 Size Assertion
+4 HTML Assertion
+5 XML JSON Assertion
+6 XPATH Assertion
+
+JMeter HTTP(s) Test Script Recorder
+What
+Why
+When
+How
+
+How to record your test on JMeter
+How to add & use Test Script Recorder
+How to add & use Recording Controller
+How to use proxy on Firefox, Chrome and System
+How to add SSL Certificate
+How to do Request Filtering
+How to use Recording Template
+
+How to use Blazemeter to Record JMeter Tests
+
+1 Create Blazemeter Account
+2 Get Blazemeter Extension
+3 Login to Blazemeter
+4 Record test
+5 Save JMX
+6 Add JMX in JMeter and Run
+
+JMeter - How to get data from CSV File
+Config Element - CSV Data Set Config
+
+1 Add CSV Data Set Config
+2 Create a csv file and add data
+3 Refer the csv file in JMeter’s csv data set config
+4 Refer values from csv file using syntax ${variableName}
+5 Run and validate
+
+JMeter Config Elements - for HTTP (Web Test Plan)
+Elements that are executed before the sampler requests at the same level
+Configuration elements can be used to set up defaults and variables for later use by samplers. Note that these elements are processed at the start of the scope in which they are found, i.e. before any samplers in the same scope
+
+Demo app - https://opensource-demo.orangehrmlive...
+
+How to run JMeter from command line
+GUI consumes memory, slower
+integrate with any external process CI CD
+
+How to run JMeter test from command line
+How to log results
+How to see command line help and options
+How to run from any location on your system (add in Path env variables)
+
+Step 1 - Open Command line ＞ Goto JMeter’s bin folder 
+Run command
+
+Windows
+jmeter -n -t “location of your test file” -l “location of results file”
+
+Linux / Mac
+sh jmeter -n -t “location of your test file” -l “location of results file”
+
+How to extend JMeter | JMeter Plugins Manager
+
+Easy & Quick way to:
+Find plugins
+Install
+Uninstall
+Upgrade
+
+Plugins - https://jmeter-plugins.org/wiki/Start/
+
+1: Download plugins manager jar from https://jmeter-plugins.org/wiki/Plugi...
+2: Add the jar file in jmeter lib/ext folder and restart JMeter
+3: Check JMeter plugins manager is added
+
+Functions & Variables
+What are functions
+What are variables
+How to use functions and variables
+
+Functions - methods used to populate fields in any other element of test plan
+
+Syntax
+${__funcName}
+${__funcName(var1, var2, ….)}
+
+Variables - containers that can store values, which can be referred in any element within a thread
+${varName}
+
+
+
+
+
+
+Create report at the end of the test
+
+
+
+jmeter -n -t “location of test file” -l “location of your result file” -e -o “location of reports folder”
+
+Create report from a standalone csv file
+
+jmeter -g “location of your result file” -o “location of reports folder”
+
+
+
+https://demo.guru99.com/test/newtours/
+
+How to find max load
+
+
+Define the performance criteria (e.g., acceptable response time, maximum error rate).
+Identify key scenarios that need to be tested (e.g., login, search, checkout).
