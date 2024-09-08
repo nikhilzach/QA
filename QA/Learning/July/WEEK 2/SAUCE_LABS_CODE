@@ -1,0 +1,171 @@
+// "appium:automationName": "UiAutomator2",
+// "appium:platformName": "Android",
+// "appium:platformVersion": "14",
+// "appium:deviceName": "P1227C000174",
+// "appium:app": "C:/Users/P10/Downloads/Saucelabs.apk",
+// "appium:appPackage": "com.swaglabsmobileapp",
+// "appium:appActivity": "com.swaglabsmobileapp.MainActivity",
+// "appium:newCommandTimeout": 3600,
+// "appium:connectHardwareKeyboard": true
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const addToCart = await $('android=new UiSelector().text("ADD TO CART").instance(0)');
+//     await addToCart.click();
+    
+//     const quantityOne = await $('android=new UiSelector().text("1")');
+//     await quantityOne.click();
+    
+//     const remove = await $('android=new UiSelector().text("REMOVE")');
+//     await remove.click();
+    
+//     const continueShopping = await $('android=new UiSelector().text("CONTINUE SHOPPING")');
+//     await continueShopping.click();
+    
+//     await swipe(532, 1859, 542, 711);
+    
+//     const addToCartSecond = await $('android=new UiSelector().description("test-ADD TO CART").instance(1)');
+//     await addToCartSecond.click();
+    
+//     const addToCartThird = await $('android=new UiSelector().text("ADD TO CART")');
+//     await addToCartThird.click();
+    
+//     const productImage = await $('android=new UiSelector().className("android.widget.ImageView").instance(5)');
+//     await productImage.click();
+    
+//     const sortLowToHigh = await $('android=new UiSelector().text("Price (low to high)")');
+//     await sortLowToHigh.click();
+    
+//     const addToCartFourth = await $('android=new UiSelector().text("ADD TO CART")');
+//     await addToCartFourth.click();
+    
+//     const quantityThree = await $('android=new UiSelector().text("3")');
+//     await quantityThree.click();
+    
+//     await browser.pause(2000);
+//     await swipe(583, 1982, 601, 702);
+    
+//     const checkout = await $('android=new UiSelector().text("CHECKOUT")');
+//     await checkout.click();
+    
+//     const zipCode = await $('~test-Zip/Postal Code');
+//     await zipCode.addValue("123456");
+    
+//     const continueCheckout = await $('android=new UiSelector().text("CONTINUE")');
+//     await continueCheckout.click();
+    
+//     const firstName = await $('~test-First Name');
+//     await firstName.addValue("nikhil");
+    
+//     const lastName = await $('~test-Last Name');
+//     await lastName.addValue("zach");
+    
+//     const errorMessage = await $('~test-Error message');
+//     await errorMessage.click();
+    
+//     const continueAfterError = await $('~test-CONTINUE');
+//     await continueAfterError.click();
+    
+//     await browser.pause(1000);
+//     await swipe(537, 2304, 542, 142);
+    
+//     const finish = await $('android=new UiSelector().text("FINISH")');
+//     await finish.click();
+    
+//     const backHome = await $('android=new UiSelector().text("BACK HOME")');
+//     await backHome.click();
+    
+//     const commonImageView = await $('android=new UiSelector().className("android.widget.ImageView").instance(1)');
+//     await commonImageView.click();
+    
+//     await $('//android.widget.TextView[@text="DRAWING"]').click();
+//     await browser.pause(2000);
+    
+//     await swipe(698, 1014, 381, 1335);
+//     await swipe(381, 1335, 707, 1322);
+//     await swipe(707, 1322, 381, 1675);
+//     await swipe(381, 1675, 468, 1423);
+//     await swipe(468, 1423, 271, 1418);
+//     await swipe(275, 1418, 257, 1202);
+//     await swipe(262, 1202, 468, 1037);
+//     await swipe(454, 1051, 569, 1051);
+//     await swipe(702, 1028, 624, 1230);
+//     await swipe(624, 1230, 821, 1234);
+//     await swipe(821, 1234, 821, 1478);
+//     await swipe(821, 1478, 670, 1602);
+//     await swipe(670, 1602, 551, 1615);
+    
+//     const save = await $('~test-SAVE');
+//     await save.click();
+    
+//     const allowPermission = await $('id=com.android.permissioncontroller:id/permission_allow_button');
+//     await allowPermission.click();
+    
+//     const confirmButton = await $('id=android:id/button1');
+//     await confirmButton.click();
+    
+//     await commonImageView.click();
+//     await commonImageView.click();
+    
+//     const qrScanner = await $('~test-QR CODE SCANNER');
+//     await qrScanner.click();
+    
+//     const allowOneTime = await $('id=com.android.permissioncontroller:id/permission_allow_one_time_button');
+//     await allowOneTime.click();
+//     await browser.pause(5000);
+    
+//     const centerX = 546;
+//     const centerY = 505;
+//     const startPoint1 = { x: centerX, y: centerY };
+//     const startPoint2 = { x: centerX, y: centerY };
+//     const endPoint1 = { x: centerX - 100, y: centerY - 100 };
+//     const endPoint2 = { x: centerX + 100, y: centerY + 100 };
+    
+//     await browser.performActions([{
+//         type: 'pointer',
+//         id: 'finger1',
+//         parameters: { pointerType: 'touch' },
+//         actions: [
+//             { type: 'pointerMove', duration: 0, x: startPoint1.x, y: startPoint1.y },
+//             { type: 'pointerDown', button: 0 },
+//             { type: 'pause', duration: 100 },
+//             { type: 'pointerMove', duration: 1000, origin: 'pointer', x: endPoint1.x, y: endPoint1.y },
+//             { type: 'pointerUp', button: 0 }      
+//         ]
+//     }, {
+//         type: 'pointer',
+//         id: 'finger2',
+//         parameters: { pointerType: 'touch' },
+//         actions: [
+//             { type: 'pointerMove', duration: 0, x: startPoint2.x, y: startPoint2.y },
+//             { type: 'pointerDown', button: 0 },
+//             { type: 'pause', duration: 100 },
+//             { type: 'pointerMove', duration: 1000, origin: 'pointer', x: endPoint2.x, y: endPoint2.y },
+//             { type: 'pointerUp', button: 0 }
+//         ]
+//     }]);
+    
+//     await browser.pause(4000);
+    
+//     await driver.executeScript("mobile: pressKey", [{"keycode": 4}]);
+//     await commonImageView.click();
+    
+//     const about = await $('~test-ABOUT');
+//     await about.click();
+    
+//     await driver.executeScript("mobile: pressKey", [{"keycode": 4}]);
+    
+//     await commonImageView.click();
+    
+//     const logout = await $('~test-LOGOUT');
+//     await logout.click();
